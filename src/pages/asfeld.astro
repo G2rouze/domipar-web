@@ -1,0 +1,104 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Asfeld" description="Découvrez Asfeld, commune dynamique de 1200 habitants à 25 minutes de Reims, village d'accueil du domicile partagé Domipar.">
+
+  <!-- Hero -->
+  <section
+    class="flex items-center justify-center flex-col gap-6 text-center"
+    style="background-image:url('/assets/asfeld-hero.webp');background-size:cover;background-position:center;padding:80px;"
+  >
+    <h1 class="font-serif text-[52px] text-black">Asfeld</h1>
+    <p class="text-black text-[20px] font-bold w-[800px] text-center">Découvrez Asfeld, village d'accueil pour nos 8 habitants</p>
+  </section>
+
+  <!-- Section Commune -->
+  <section class="bg-[#faf8f5]">
+    <div class="max-w-[1440px] mx-auto px-20 py-20 flex items-center gap-16">
+      <div class="flex flex-col gap-5 flex-1">
+        <h2 class="font-serif text-[36px] text-[#2c3e35] leading-tight">Une commune dynamique au cœur des Ardennes</h2>
+        <p class="text-[#5a7a68] text-base leading-[1.6]">
+          Asfeld est une commune dynamique, de 1200 habitants, située à 25 minutes de Reims, dans le sud-ouest du département des Ardennes, au sein d'une région naturelle nommée le Porcien.
+        </p>
+        <p class="text-[#5a7a68] text-base leading-[1.6]">
+          Le village dispose d'une école, d'un collège et de nombreux commerces.
+        </p>
+      </div>
+      <div class="shrink-0">
+        <img
+          src="/assets/asfeld-map.png"
+          alt="Carte de localisation d'Asfeld"
+          class="rounded-2xl object-cover"
+          style="width:500px;height:380px;"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Maison Domipar -->
+  <section class="bg-[#d4e4d0]">
+    <div class="max-w-[1440px] mx-auto px-20 py-20 flex items-center gap-16">
+      <div class="shrink-0">
+        <img
+          src="/assets/asfeld-maison-sante.png"
+          alt="Maison de santé d'Asfeld"
+          class="rounded-2xl object-cover"
+          style="width:500px;height:380px;"
+        />
+      </div>
+      <div class="flex flex-col gap-5 flex-1">
+        <h2 class="font-serif text-[36px] text-[#2c3e35] leading-tight">La maison Domipar à Asfeld</h2>
+        <p class="text-[#5a7a68] text-base leading-[1.6]">
+          La maison sera construite rue Marin Marais dans le nouveau lotissement « La clef des chants », à proximité de la crèche.
+        </p>
+        <p class="text-[#5a7a68] text-base leading-[1.6]">
+          Présence également sur la commune d'un centre de secours et de la maison médicale de l'Asfeldois, dont certains professionnels de santé sont déjà très investis dans le projet.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Professionnels de santé -->
+  <section class="bg-[#faf8f5]">
+    <div class="max-w-[1440px] mx-auto px-20 py-20 flex flex-col gap-10 items-center">
+      <h2 class="font-serif text-[36px] text-[#2c3e35] text-center">Professionnels de santé</h2>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <span class="px-6 py-3 rounded-full bg-[#d4e4d0] text-[#2c3e35] text-sm">Médecins généralistes</span>
+        <span class="px-6 py-3 rounded-full bg-[#d4e4d0] text-[#2c3e35] text-sm">Chirurgien dentiste</span>
+        <span class="px-6 py-3 rounded-full bg-[#d4e4d0] text-[#2c3e35] text-sm">Infirmiers</span>
+        <span class="px-6 py-3 rounded-full bg-[#d4e4d0] text-[#2c3e35] text-sm">Masseurs-kinésithérapeutes</span>
+        <span class="px-6 py-3 rounded-full bg-[#d4e4d0] text-[#2c3e35] text-sm">Orthophoniste</span>
+        <span class="px-6 py-3 rounded-full bg-[#d4e4d0] text-[#2c3e35] text-sm">Ergothérapeute</span>
+        <span class="px-6 py-3 rounded-full bg-[#d4e4d0] text-[#2c3e35] text-sm">Pédicure-podologue</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Église -->
+  <section class="bg-[#d4e4d0]">
+    <div class="max-w-[1440px] mx-auto px-20 py-20 flex items-center gap-16">
+      <div class="flex flex-col gap-5 flex-1">
+        <h2 class="font-serif text-[36px] text-[#2c3e35] leading-tight">L'église Saint-Didier d'Asfeld</h2>
+        <p class="text-[#5a7a68] text-base leading-[1.6]">
+          L'église Saint Didier d'Asfeld est l'une des plus singulière de France. Construite à la fin du XVII<sup>e</sup> siècle, en briques et en ardoises... elle apparaît tout en rondeur...
+        </p>
+        <p class="text-[#5a7a68] text-base leading-[1.6]">
+          l'église Saint-Didier d'Asfeld a la forme d'une viole de Gambe.
+        </p>
+        <p class="text-[#5a7a68] text-base leading-[1.6]">
+          Tous les 2 ans au début de l'été, elle est au centre du Festival international de Viole de Gambe.
+        </p>
+      </div>
+      <div class="shrink-0">
+        <img
+          src="/assets/asfeld-eglise.jpg"
+          alt="Église Saint-Didier d'Asfeld"
+          class="rounded-2xl object-cover"
+          style="width:500px;height:420px;"
+        />
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

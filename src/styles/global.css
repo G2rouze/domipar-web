@@ -1,0 +1,27 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap");
+
+@theme {
+  /* Couleurs Domipar */
+  --color-sauge: #d4e4d0;
+  --color-creme: #faf8f5;
+  --color-foret: #2c3e35;
+  --color-moyen: #5a7a68;
+  --color-moyen-light: #7a9a88;
+  --color-foret-dark: #1e2e27;
+
+  /* Polices */
+  --font-serif: "Lora", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-creme);
+  color: var(--color-foret);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+}
