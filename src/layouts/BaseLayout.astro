@@ -10,6 +10,7 @@ const { title, description = "Domicile Partagé à Asfeld (08) pour personnes at
 const currentPath = Astro.url.pathname;
 
 const navLinks = [
+  { href: '/', label: 'Accueil' },
   { href: '/projet', label: 'Le Projet' },
   { href: '/qui-sommes-nous', label: 'Qui sommes-nous ?' },
   { href: '/la-maison', label: 'La Maison' },
@@ -56,7 +57,9 @@ const navLinks = [
         </ul>
 
         <a
-          href="/contact"
+          href="https://www.helloasso.com/associations/domipar-asfeld/formulaires/1"
+          target="_blank"
+          rel="noopener"
           class="hidden md:inline-flex items-center px-6 py-2.5 rounded-full bg-[#d4e4d0] text-[#2c3e35] text-sm font-semibold hover:bg-[#c4d8bf] transition-colors"
         >
           Nous soutenir
@@ -81,7 +84,7 @@ const navLinks = [
             </li>
           ))}
           <li>
-            <a href="/contact" class="inline-flex px-6 py-2.5 rounded-full bg-[#d4e4d0] text-[#2c3e35] text-sm font-semibold">
+            <a href="https://www.helloasso.com/associations/domipar-asfeld/formulaires/1" target="_blank" rel="noopener" class="inline-flex px-6 py-2.5 rounded-full bg-[#d4e4d0] text-[#2c3e35] text-sm font-semibold">
               Nous soutenir
             </a>
           </li>
@@ -153,6 +156,18 @@ const navLinks = [
           if (!user) {
             window.netlifyIdentity.on('login', () => {
               document.location.href = '/admin/';
+            });
+          }
+        });
+      }
+    </script>
+
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
             });
           }
         });
