@@ -1,5 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allActus = await getCollection('actualites');
+const recentActus = allActus.sort((a, b) => a.data.ordre - b.data.ordre).slice(0, 3);
 ---
 
 <BaseLayout title="Accueil" description="DOMIPAR présente son domicile partagé pour personnes atteintes d'Alzheimer ou maladies apparentées. Ouverture prévue à Asfeld dans les Ardennes fin 2027.">
@@ -101,36 +105,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </a>
       </div>
       <div class="grid grid-cols-3 gap-6">
-        <!-- Card 1 -->
-        <a href="/actualites" class="bg-white rounded-[20px] overflow-hidden shadow-sm border border-[#d4e4d0] flex flex-col hover:shadow-md transition-shadow">
-          <div class="h-1 bg-[#5a7a68]"></div>
-          <div class="p-5 flex flex-col gap-[10px]">
-            <time class="text-[#5a7a68] text-[11px] font-semibold tracking-[1.5px] uppercase">24 Mars 2026</time>
-            <h3 class="font-serif text-[17px] leading-[1.35] text-[#2c3e35]">Projection de film et débat public</h3>
-            <p class="text-[#5a7a68] text-sm leading-[1.55]">Rejoignez-nous pour une soirée ouverte à tous autour du projet et de la maladie d'Alzheimer.</p>
-            <span class="text-[#2c3e35] text-[13px] font-medium">Lire la suite →</span>
-          </div>
-        </a>
-        <!-- Card 2 -->
-        <a href="/actualites" class="bg-white rounded-[20px] overflow-hidden shadow-sm border border-[#d4e4d0] flex flex-col hover:shadow-md transition-shadow">
-          <div class="h-1 bg-[#5a7a68]"></div>
-          <div class="p-5 flex flex-col gap-[10px]">
-            <time class="text-[#5a7a68] text-[11px] font-semibold tracking-[1.5px] uppercase">Février 2026</time>
-            <h3 class="font-serif text-[17px] leading-[1.35] text-[#2c3e35]">Lauréat du programme CASALIS 2025</h3>
-            <p class="text-[#5a7a68] text-sm leading-[1.55]">Une reconnaissance nationale pour notre démarche innovante d'habitat inclusif.</p>
-            <span class="text-[#2c3e35] text-[13px] font-medium">Lire la suite →</span>
-          </div>
-        </a>
-        <!-- Card 3 -->
-        <a href="/actualites" class="bg-white rounded-[20px] overflow-hidden shadow-sm border border-[#d4e4d0] flex flex-col hover:shadow-md transition-shadow">
-          <div class="h-1 bg-[#5a7a68]"></div>
-          <div class="p-5 flex flex-col gap-[10px]">
-            <time class="text-[#5a7a68] text-[11px] font-semibold tracking-[1.5px] uppercase">Janvier 2026</time>
-            <h3 class="font-serif text-[17px] leading-[1.35] text-[#2c3e35]">Avancement des démarches immobilières</h3>
-            <p class="text-[#5a7a68] text-sm leading-[1.55]">La recherche du bien immobilier à Asfeld progresse selon nos objectifs.</p>
-            <span class="text-[#2c3e35] text-[13px] font-medium">Lire la suite →</span>
-          </div>
-        </a>
+        {recentActus.map((actu) => (
+          <a href="/actualites" class="bg-white rounded-[20px] overflow-hidden shadow-sm border border-[#d4e4d0] flex flex-col hover:shadow-md transition-shadow">
+            <div class="h-1 bg-[#5a7a68]"></div>
+            <div class="p-5 flex flex-col gap-[10px]">
+              <time class="text-[#5a7a68] text-[11px] font-semibold tracking-[1.5px] uppercase">{actu.data.date}</time>
+              <h3 class="font-serif text-[17px] leading-[1.35] text-[#2c3e35]">{actu.data.titre}</h3>
+              <p class="text-[#5a7a68] text-sm leading-[1.55]">{actu.data.texte}</p>
+              <span class="text-[#2c3e35] text-[13px] font-medium">Lire la suite →</span>
+            </div>
+          </a>
+        ))}
       </div>
     </div>
   </section>
