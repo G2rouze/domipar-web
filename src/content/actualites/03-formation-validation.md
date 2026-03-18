@@ -1,6 +1,5 @@
 ---
 titre: "Formation à la Validation selon Naomi Feil"
-date: "23-24-25 OCTOBRE 2025"
+date: "2025-10-23"
 texte: "Premier module par Kathia Munsch, organisé pour les professionnels."
-ordre: 3
 ---

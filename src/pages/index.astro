@@ -3,7 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 
 const allActus = await getCollection('actualites');
-const recentActus = allActus.sort((a, b) => a.data.ordre - b.data.ordre).slice(0, 3);
+const recentActus = allActus.sort((a, b) => b.data.date.localeCompare(a.data.date)).slice(0, 3);
+const formatDate = (iso: string) => new Date(iso + 'T12:00:00').toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' }).toUpperCase();
 
 const evenements = await getCollection('evenements');
 ---
@@ -119,7 +120,7 @@ const evenements = await getCollection('evenements');
           <a href="/actualites" class="bg-white rounded-[20px] overflow-hidden shadow-sm border border-[#d4e4d0] flex flex-col hover:shadow-md transition-shadow">
             <div class="h-1 bg-[#5a7a68]"></div>
             <div class="p-5 flex flex-col gap-[10px]">
-              <time class="text-[#5a7a68] text-[11px] font-semibold tracking-[1.5px] uppercase">{actu.data.date}</time>
+              <time class="text-[#5a7a68] text-[11px] font-semibold tracking-[1.5px] uppercase">{formatDate(actu.data.date)}</time>
               <h3 class="font-serif text-[17px] leading-[1.35] text-[#2c3e35]">{actu.data.titre}</h3>
               <p class="text-[#5a7a68] text-sm leading-[1.55]">{actu.data.texte}</p>
               <span class="text-[#2c3e35] text-[13px] font-medium">Lire la suite →</span>

@@ -8,7 +8,6 @@ const actualites = defineCollection({
     date: z.string(),
     texte: z.string(),
     href: z.string().url().optional(),
-    ordre: z.number(),
   }),
 });
 

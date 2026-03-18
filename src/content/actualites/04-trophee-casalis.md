@@ -1,6 +1,5 @@
 ---
 titre: "Remise du Trophée CASALIS"
-date: "23 SEPTEMBRE 2025"
+date: "2025-09-23"
 texte: "Colocation Alzheimer, Système d'Accompagnement vers le Logement Inclusif et Solidaire."
-ordre: 4
 ---

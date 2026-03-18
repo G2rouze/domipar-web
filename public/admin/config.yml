@@ -14,13 +14,12 @@ collections:
     folder: src/content/actualites
     create: true
     delete: true
-    slug: "{{ordre}}-{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - { label: Titre, name: titre, widget: string }
-      - { label: "Date (ex: 24 MARS 2026)", name: date, widget: string }
+      - { label: Date, name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, hint: "Date de l'actualité — utilisée pour le tri automatique" }
       - { label: Résumé, name: texte, widget: text }
       - { label: Lien externe (optionnel), name: href, widget: string, required: false, hint: "URL complète vers un article, vidéo, PDF..." }
-      - { label: "Ordre d'affichage (1 = le plus récent)", name: ordre, widget: number, value_type: int }
 
   - name: evenements
     label: "Événement homepage"
