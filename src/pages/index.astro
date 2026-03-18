@@ -4,6 +4,9 @@ import { getCollection } from 'astro:content';
 
 const allActus = await getCollection('actualites');
 const recentActus = allActus.sort((a, b) => a.data.ordre - b.data.ordre).slice(0, 3);
+
+const evenements = await getCollection('evenements');
+const evenement = evenements[0] ?? null;
 ---
 
 <BaseLayout title="Accueil" description="DOMIPAR présente son domicile partagé pour personnes atteintes d'Alzheimer ou maladies apparentées. Ouverture prévue à Asfeld dans les Ardennes fin 2027.">
@@ -61,38 +64,41 @@ const recentActus = allActus.sort((a, b) => a.data.ordre - b.data.ordre).slice(0
     </div>
   </section>
 
-  <!-- Invitation 24 mars -->
-  <section class="bg-[#faf8f5]">
-    <div class="max-w-[1440px] mx-auto px-20 py-20 flex items-center gap-20">
-      <div class="shrink-0 flex gap-4">
-        <img
-          src="/assets/invit-film-domipar-24-mars.png"
-          alt="Invitation soirée ciné-débat 24 mars 2026"
-          class="rounded-3xl object-contain"
-          style="width:210px;height:420px;"
-        />
-        <img
-          src="/assets/programme-projection-reims.jpg"
-          alt="Programme projection Reims 24 mars 2026"
-          class="rounded-3xl object-contain"
-          style="width:210px;height:420px;"
-        />
+  <!-- Événement en cours (géré via CMS) -->
+  {evenement && (
+    <section class="bg-[#faf8f5]">
+      <div class="max-w-[1440px] mx-auto px-20 py-20 flex items-center gap-20">
+        <div class="shrink-0 flex gap-4">
+          {evenement.data.image1 && (
+            <img
+              src={evenement.data.image1}
+              alt={evenement.data.image1Alt ?? ''}
+              class="rounded-3xl object-contain"
+              style="width:210px;height:420px;"
+            />
+          )}
+          {evenement.data.image2 && (
+            <img
+              src={evenement.data.image2}
+              alt={evenement.data.image2Alt ?? ''}
+              class="rounded-3xl object-contain"
+              style="width:210px;height:420px;"
+            />
+          )}
+        </div>
+        <div class="flex flex-col gap-6 flex-1">
+          <h2 class="font-serif text-[40px] leading-[1.25] text-[#2c3e35]">{evenement.data.titre}</h2>
+          <p class="text-[#3a5545] text-base leading-[1.7]" set:html={evenement.data.description.replace(/\n\n/g, '<br/><br/>').replace(/\n/g, ' ')} />
+          {evenement.data.lien && (
+            <a href={evenement.data.lien} target="_blank" rel="noopener"
+              class="inline-flex items-center self-start px-7 py-[13px] rounded-full bg-[#2c3e35] text-white text-sm font-semibold hover:bg-[#1e2e27] transition-colors">
+              {evenement.data.lienLabel ?? 'En savoir plus'}
+            </a>
+          )}
+        </div>
       </div>
-      <div class="flex flex-col gap-6 flex-1">
-        <h2 class="font-serif text-[40px] leading-[1.25] text-[#2c3e35]">Invitation le mardi 24 mars 2026</h2>
-        <p class="text-[#3a5545] text-base leading-[1.7]">
-          En attendant l'ouverture de la première colocation Alzheimer de Champagne-Ardennes, DOMIPAR a le plaisir de vous inviter à une soirée ciné – débat :<br/><br/>
-          La soirée débutera par la projection du film « La maison de l'instant présent » d'Anne Mourgues qui retrace l'emménagement d'Anny, Laurence, Françoise, Marie et Annette à la maison du Thil, une colocation Alzheimer où entourées, choyées, elles peuvent continuer à vivre « comme à la maison ». (voir la bande annonce ici)<br/><br/>
-          La projection sera suivie d'un temps d'échanges avec Christine Tabuenca, directrice de la Fondation Médéric Alzheimer, sur les enjeux actuels et les perspectives d'évolution de l'offre d'habitat pour les personnes atteintes de troubles cognitifs.<br/><br/>
-          Venez nombreux et transmettez cette invitation à toutes les familles affectées par la maladie !
-        </p>
-        <a href="https://www.fondation-mederic-alzheimer.org/24-mars-place-des-colocations-alzheimer-dans-loffre-dhabitat-pour-personnes-agees/" target="_blank" rel="noopener"
-          class="inline-flex items-center self-start px-7 py-[13px] rounded-full bg-[#2c3e35] text-white text-sm font-semibold hover:bg-[#1e2e27] transition-colors">
-          Inscription gratuite mais obligatoire ici
-        </a>
-      </div>
-    </div>
-  </section>
+    </section>
+  )}
 
   <!-- Actualités -->
   <section class="bg-[#d4e4d0]">

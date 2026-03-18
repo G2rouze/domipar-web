@@ -21,3 +21,21 @@ collections:
       - { label: Résumé, name: texte, widget: text }
       - { label: Lien externe (optionnel), name: href, widget: string, required: false, hint: "URL complète vers un article, vidéo, PDF..." }
       - { label: "Ordre d'affichage (1 = le plus récent)", name: ordre, widget: number, value_type: int }
+
+  - name: evenements
+    label: "Événement homepage"
+    label_singular: "Événement"
+    folder: src/content/evenements
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    summary: "{{titre}}"
+    fields:
+      - { label: Titre, name: titre, widget: string, hint: "Ex: Invitation le mardi 24 mars 2026" }
+      - { label: Description, name: description, widget: text, hint: "Texte affiché sous le titre. Sauter une ligne = paragraphe." }
+      - { label: "Lien du bouton (optionnel)", name: lien, widget: string, required: false, hint: "URL complète" }
+      - { label: "Texte du bouton", name: lienLabel, widget: string, required: false, default: "En savoir plus" }
+      - { label: "Image 1 (optionnelle)", name: image1, widget: string, required: false, hint: "Chemin ex: /assets/mon-image.png" }
+      - { label: "Description image 1", name: image1Alt, widget: string, required: false }
+      - { label: "Image 2 (optionnelle)", name: image2, widget: string, required: false, hint: "Chemin ex: /assets/mon-image-2.png" }
+      - { label: "Description image 2", name: image2Alt, widget: string, required: false }
