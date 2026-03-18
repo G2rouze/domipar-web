@@ -28,7 +28,8 @@ collections:
     folder: src/content/evenements
     create: true
     delete: true
-    slug: "{{slug}}"
+    identifier_field: titre
+    slug: "{{titre}}"
     summary: "{{titre}}"
     fields:
       - { label: Titre, name: titre, widget: string, hint: "Ex: Invitation le mardi 24 mars 2026" }
