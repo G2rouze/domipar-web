@@ -14,10 +14,11 @@ collections:
     folder: src/content/actualites
     create: true
     delete: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    identifier_field: titre
+    slug: "{{year}}-{{month}}-{{day}}-{{titre}}"
     fields:
       - { label: Titre, name: titre, widget: string }
-      - { label: Date, name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, hint: "Date de l'actualité — utilisée pour le tri automatique" }
+      - { label: Date, name: date, widget: string, pattern: ['^\d{4}-\d{2}-\d{2}$', 'Format requis : AAAA-MM-JJ (ex: 2025-06-20)'], hint: "Date au format AAAA-MM-JJ (ex: 2025-06-20) — utilisée pour le tri automatique" }
       - { label: Résumé, name: texte, widget: text }
       - { label: Lien externe (optionnel), name: href, widget: string, required: false, hint: "URL complète vers un article, vidéo, PDF..." }
 
