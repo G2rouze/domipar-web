@@ -10,18 +10,18 @@ const actualites = allActus.sort((a, b) => a.data.ordre - b.data.ordre);
 
   <!-- Hero -->
   <section class="bg-[#d4e4d0]">
-    <div class="max-w-[1440px] mx-auto px-20 py-20 flex flex-col items-center gap-4 text-center">
-      <h1 class="font-serif text-[52px] font-bold text-[#2c3e35]">Actualités</h1>
-      <p class="text-[#5a7a68] text-[17px] leading-[1.55] w-[700px]">
-        Suivez les dernières nouvelles et étapes du projet Domipar,<br/>une colocation innovante pour les personnes atteintes de la maladie d'Alzheimer.
+    <div class="max-w-[1440px] mx-auto px-4 md:px-20 py-10 md:py-20 flex flex-col items-center gap-4 text-center">
+      <h1 class="font-serif text-[30px] md:text-[52px] font-bold text-[#2c3e35]">Actualités</h1>
+      <p class="text-[#5a7a68] text-base md:text-[17px] leading-[1.55] max-w-xl">
+        Suivez les dernières nouvelles et étapes du projet Domipar,<br class="hidden md:block"/>une colocation innovante pour les personnes atteintes de la maladie d'Alzheimer.
       </p>
     </div>
   </section>
 
   <!-- Grille actualités -->
   <section class="bg-[#faf8f5]">
-    <div class="max-w-[1440px] mx-auto px-20 py-[72px] flex flex-col gap-6">
-      <div class="grid grid-cols-3 gap-6">
+    <div class="max-w-[1440px] mx-auto px-4 md:px-20 py-10 md:py-[72px] flex flex-col gap-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {actualites.map((actu) => (
           actu.data.href ? (
             <a href={actu.data.href} target="_blank" rel="noopener" class="bg-white rounded-[20px] overflow-hidden flex flex-col border border-[#d4e4d0] hover:border-[#5a7a68] hover:shadow-md transition-all">

@@ -12,34 +12,33 @@ const evenements = await getCollection('evenements');
 
   <!-- Héro -->
   <section class="bg-[#faf8f5]">
-    <div class="max-w-[1440px] mx-auto px-20 py-20 flex items-center gap-[60px]">
-      <div class="flex flex-col gap-7 w-[580px] shrink-0">
+    <div class="max-w-[1440px] mx-auto px-4 md:px-20 py-10 md:py-20 flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-[60px]">
+      <div class="flex flex-col gap-7 w-full md:w-[580px] md:shrink-0">
         <span class="inline-flex items-center self-start px-[14px] py-[5px] rounded-full bg-[#d4e4d033] text-[#5a7a68] text-xs font-medium tracking-[0.5px]">
           Lauréat CASALIS 2025
         </span>
-        <h1 class="font-serif text-[54px] leading-[1.15] text-[#2c3e35] w-[580px]">
+        <h1 class="font-serif text-[32px] md:text-[54px] leading-[1.15] text-[#2c3e35]">
           Vivre comme à la maison<br/>dans un domicile partagé Alzheimer
         </h1>
-        <p class="text-[#5a7a68] text-[17px] leading-[1.7] w-[540px]">
+        <p class="text-[#5a7a68] text-base md:text-[17px] leading-[1.7]">
           DOMIPAR présente son domicile partagé pour personnes atteintes d'Alzheimer ou maladies apparentées. Ouverture prévue à Asfeld dans les Ardennes fin 2027.
         </p>
-        <div class="flex items-center gap-[14px]">
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 md:gap-[14px]">
           <a href="https://www.helloasso.com/associations/domipar-asfeld/" target="_blank" rel="noopener"
-            class="inline-flex items-center px-8 py-[13px] rounded-full bg-[#2c3e35] text-white text-[15px] font-semibold hover:bg-[#1e2e27] transition-colors">
+            class="inline-flex items-center justify-center px-8 py-[13px] rounded-full bg-[#2c3e35] text-white text-[15px] font-semibold hover:bg-[#1e2e27] transition-colors">
             Nous soutenir
           </a>
           <a href="/projet"
-            class="inline-flex items-center px-8 py-[13px] rounded-full border border-[#2c3e35] text-[#2c3e35] text-[15px] font-medium bg-[#faf8f5] hover:bg-[#f0ede8] transition-colors">
+            class="inline-flex items-center justify-center px-8 py-[13px] rounded-full border border-[#2c3e35] text-[#2c3e35] text-[15px] font-medium bg-[#faf8f5] hover:bg-[#f0ede8] transition-colors">
             Découvrir le projet
           </a>
         </div>
       </div>
-      <div class="flex-1">
+      <div class="w-full md:flex-1">
         <img
           src="/assets/accueil-render-home.png"
           alt="Rendu 3D du domicile partagé Domipar"
-          class="w-full rounded-3xl object-cover"
-          style="height:480px;"
+          class="w-full rounded-3xl object-cover h-[220px] sm:h-[320px] md:h-[480px]"
         />
       </div>
     </div>
@@ -47,9 +46,9 @@ const evenements = await getCollection('evenements');
 
   <!-- Mission -->
   <section class="bg-[#d4e4d0]">
-    <div class="max-w-[1440px] mx-auto px-20 py-20 flex flex-col items-center gap-6 text-center">
+    <div class="max-w-[1440px] mx-auto px-4 md:px-20 py-10 md:py-20 flex flex-col items-center gap-6 text-center">
       <p class="text-[#5a7a68] text-[13px] font-semibold tracking-[1.5px] uppercase">Notre projet</p>
-      <h2 class="font-serif text-[40px] leading-[1.25] text-[#2c3e35]">Un projet qui a du sens</h2>
+      <h2 class="font-serif text-[26px] md:text-[40px] leading-[1.25] text-[#2c3e35]">Un projet qui a du sens</h2>
       <p class="text-[#3a5545] text-base leading-[1.7] max-w-4xl">
         Permettre à 8 personnes atteintes d'Alzheimer ou maladies apparentées de vivre ensemble, en colocation dans un environnement sécurisé, protégé, sain.<br/><br/>
         Leur proposer un accompagnement personnalisé en les faisant participer, comme à la maison, aux tâches de la vie quotidienne, afin de maintenir le plus possible leur autonomie et retarder ainsi au maximum les troubles du comportement liés à cette maladie.<br/><br/>
@@ -66,31 +65,31 @@ const evenements = await getCollection('evenements');
   <!-- Événements en cours (gérés via CMS) -->
   {evenements.length > 0 && (
     <section class="bg-[#faf8f5]">
-      <div class="max-w-[1440px] mx-auto px-20 py-20 flex flex-col gap-16">
+      <div class="max-w-[1440px] mx-auto px-4 md:px-20 py-10 md:py-20 flex flex-col gap-12 md:gap-16">
         {evenements.map((ev) => (
-          <div class="flex items-start gap-20">
+          <div class="flex flex-col md:flex-row items-start gap-8 md:gap-20">
             {(ev.data.image1 || ev.data.image2) && (
-              <div class="shrink-0 flex gap-4">
+              <div class="flex gap-4 w-full md:w-auto md:shrink-0">
                 {ev.data.image1 && (
                   <img
                     src={ev.data.image1}
                     alt={ev.data.image1Alt ?? ''}
-                    class="rounded-3xl object-contain"
-                    style="width:210px;height:420px;"
+                    class="rounded-3xl object-contain flex-1 md:flex-none"
+                    style="width:210px;height:420px;max-width:50%;"
                   />
                 )}
                 {ev.data.image2 && (
                   <img
                     src={ev.data.image2}
                     alt={ev.data.image2Alt ?? ''}
-                    class="rounded-3xl object-contain"
-                    style="width:210px;height:420px;"
+                    class="rounded-3xl object-contain flex-1 md:flex-none"
+                    style="width:210px;height:420px;max-width:50%;"
                   />
                 )}
               </div>
             )}
             <div class="flex flex-col gap-6 flex-1">
-              <h2 class="font-serif text-[40px] leading-[1.25] text-[#2c3e35]">{ev.data.titre}</h2>
+              <h2 class="font-serif text-[26px] md:text-[40px] leading-[1.25] text-[#2c3e35]">{ev.data.titre}</h2>
               <p class="text-[#3a5545] text-base leading-[1.7]" set:html={ev.data.description.replace(/\n\n/g, '<br/><br/>').replace(/\n/g, ' ')} />
               {ev.data.lien && (
                 <a href={ev.data.lien} target="_blank" rel="noopener"
@@ -107,15 +106,15 @@ const evenements = await getCollection('evenements');
 
   <!-- Actualités -->
   <section class="bg-[#d4e4d0]">
-    <div class="max-w-[1440px] mx-auto px-20 py-[72px] flex flex-col gap-11">
+    <div class="max-w-[1440px] mx-auto px-4 md:px-20 py-10 md:py-[72px] flex flex-col gap-8 md:gap-11">
       <div class="flex items-center justify-between">
-        <h2 class="font-serif text-[38px] text-[#2c3e35]">Actualités</h2>
+        <h2 class="font-serif text-[26px] md:text-[38px] text-[#2c3e35]">Actualités</h2>
         <a href="/actualites"
-          class="inline-flex items-center px-5 py-[9px] rounded-full bg-[#d4e4d033] text-[#5a7a68] text-[13px] font-medium hover:bg-[#c4d8bf] transition-colors">
-          Voir toutes les actualités →
+          class="inline-flex items-center px-4 md:px-5 py-[9px] rounded-full bg-[#d4e4d033] text-[#5a7a68] text-[13px] font-medium hover:bg-[#c4d8bf] transition-colors whitespace-nowrap">
+          Voir tout →
         </a>
       </div>
-      <div class="grid grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {recentActus.map((actu) => (
           <a href="/actualites" class="bg-white rounded-[20px] overflow-hidden shadow-sm border border-[#d4e4d0] flex flex-col hover:shadow-md transition-shadow">
             <div class="h-1 bg-[#5a7a68]"></div>
@@ -133,20 +132,20 @@ const evenements = await getCollection('evenements');
 
   <!-- CTA HelloAsso -->
   <section class="bg-[#2c3e35]">
-    <div class="max-w-[1440px] mx-auto px-20 py-20 flex flex-col items-center gap-6 text-center">
-      <h2 class="font-serif text-[40px] leading-[1.2] text-[#faf8f5] w-[700px]">
+    <div class="max-w-[1440px] mx-auto px-4 md:px-20 py-10 md:py-20 flex flex-col items-center gap-6 text-center">
+      <h2 class="font-serif text-[26px] md:text-[40px] leading-[1.2] text-[#faf8f5]">
         Il est possible d'adhérer<br/>à l'association et/ou de faire un don
       </h2>
-      <p class="text-[#7a9a88] text-[17px] leading-[1.65] w-[580px]">
+      <p class="text-[#7a9a88] text-base md:text-[17px] leading-[1.65] max-w-xl">
         Rejoignez la communauté des soutiens de Domipar et participez à l'ouverture de la maison prévue fin 2027.
       </p>
-      <div class="flex items-center gap-4 mt-2">
+      <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 mt-2">
         <a href="https://www.helloasso.com/associations/domipar-asfeld/adhesions/bulletin-d-adhesion/widget-vignette?_gl=1%2a1sqe9r5%2a_gcl_aw%2aR0NMLjE3Njg0MTI2MDAuQ2p3S0NBaUFtcDNMQmhBa0Vpd0FKTTJKVUp2T0NBUkd6UGRnUVFGQlNLd2EtajFOeGFtVkRFcXE1UUVHeWFnS1IxRng5eWZ1MnhuanJCb0NWazBRQXZEX0J3RQ..%2a_gcl_au%2aMTU4MjgyNDE5My4xNzY3MTc2Njk5LjYzMjY2NTkwLjE3NzM2NjA3MjguMTc3MzY2MTE1OA.." target="_blank" rel="noopener"
-          class="inline-flex items-center px-9 py-[14px] rounded-full bg-[#d4e4d0] text-[#2c3e35] text-[15px] font-semibold hover:bg-white transition-colors">
-          Adhérer à Domipar via Hello Asso
+          class="inline-flex items-center justify-center px-7 md:px-9 py-[14px] rounded-full bg-[#d4e4d0] text-[#2c3e35] text-[15px] font-semibold hover:bg-white transition-colors">
+          Adhérer via Hello Asso
         </a>
         <a href="https://www.helloasso.com/associations/domipar-asfeld/formulaires/1" target="_blank" rel="noopener"
-          class="inline-flex items-center px-9 py-[14px] rounded-full border border-[#d4e4d066] bg-white/[0.08] text-[#d4e4d0] text-[15px] font-medium hover:bg-white/20 transition-colors">
+          class="inline-flex items-center justify-center px-7 md:px-9 py-[14px] rounded-full border border-[#d4e4d066] bg-white/[0.08] text-[#d4e4d0] text-[15px] font-medium hover:bg-white/20 transition-colors">
           Faire un don via Hello Asso
         </a>
       </div>

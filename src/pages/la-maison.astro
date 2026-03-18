@@ -6,9 +6,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <!-- Hero -->
   <section class="bg-[#d4e4d0]">
-    <div class="max-w-[1440px] mx-auto px-20 flex items-center justify-center flex-col gap-5 text-center" style="height:480px;">
-      <h1 class="font-serif text-[52px] font-bold text-[#2c3e35] w-[900px] leading-tight">Une maison à taille humaine</h1>
-      <p class="text-[#5a7a68] text-[17px] leading-[1.6] w-[700px]">
+    <div class="max-w-[1440px] mx-auto px-4 md:px-20 py-14 md:py-20 flex items-center justify-center flex-col gap-5 text-center">
+      <h1 class="font-serif text-[28px] md:text-[52px] font-bold text-[#2c3e35] leading-tight">Une maison à taille humaine</h1>
+      <p class="text-[#5a7a68] text-base md:text-[17px] leading-[1.6] max-w-2xl">
         Un domicile partagé conçu pour les personnes atteintes de la maladie d'Alzheimer ou de troubles apparentés, à Asfeld.
       </p>
       <a href="#chambres" class="inline-flex items-center px-7 py-3 rounded-full bg-[#2c3e35] text-white text-[15px] font-medium hover:bg-[#1e2e27] transition-colors mt-2">
@@ -19,28 +19,30 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <!-- 8 chambres individuelles -->
   <section id="chambres" class="bg-[#faf8f5]">
-    <div class="max-w-[1440px] mx-auto px-20 py-20 flex items-center gap-20">
-      <div class="flex flex-col gap-6 flex-1">
-        <h2 class="font-serif text-[38px] font-bold text-[#2c3e35] leading-[1.3] w-[520px]">8 chambres individuelles</h2>
-        <p class="text-[#5a7a68] text-base leading-[1.7] w-[520px]">
+    <div class="max-w-[1440px] mx-auto px-4 md:px-20 py-10 md:py-20 flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-20">
+      <div class="flex flex-col gap-6 w-full md:flex-1">
+        <h2 class="font-serif text-[24px] md:text-[38px] font-bold text-[#2c3e35] leading-[1.3]">8 chambres individuelles</h2>
+        <p class="text-[#5a7a68] text-base leading-[1.7]">
           Un espace privé avec lavabo. Réparties de chaque côté de la pièce de vie, elles sont personnalisables afin que chacun retrouve son univers avec ses propres meubles. Elles sont adaptées à la perte d'autonomie des personnes âgées : portes larges, chemins lumineux, détecteur de chutes, rails de transfert pour fixer un éventuel monte-malade, volets roulants…
         </p>
       </div>
-      <div class="shrink-0">
-        <img src="/assets/maison-plan.png" alt="Plan de la maison Domipar" class="rounded-3xl object-cover" style="width:500px;height:400px;" />
+      <div class="w-full md:shrink-0">
+        <img src="/assets/maison-plan.png" alt="Plan de la maison Domipar"
+          class="w-full md:w-[500px] rounded-3xl object-cover h-[220px] md:h-[400px]" />
       </div>
     </div>
   </section>
 
   <!-- Pièce de vie -->
   <section class="bg-[#d4e4d0]">
-    <div class="max-w-[1440px] mx-auto px-20 py-20 flex items-center gap-20">
-      <div class="shrink-0">
-        <img src="/assets/maison-piece-de-vie.jpg" alt="La pièce de vie" class="rounded-3xl object-cover" style="width:624px;height:400px;" />
+    <div class="max-w-[1440px] mx-auto px-4 md:px-20 py-10 md:py-20 flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-20">
+      <div class="w-full md:shrink-0">
+        <img src="/assets/maison-piece-de-vie.jpg" alt="La pièce de vie"
+          class="w-full md:w-[500px] rounded-3xl object-cover h-[220px] md:h-[400px]" />
       </div>
-      <div class="flex flex-col gap-6 flex-1">
-        <h2 class="font-serif text-[38px] font-bold text-[#2c3e35] leading-[1.3] w-[520px]">Une grande pièce de vie</h2>
-        <p class="text-[#2c3e35] text-base leading-[1.7] w-[520px]">
+      <div class="flex flex-col gap-6 w-full md:flex-1">
+        <h2 class="font-serif text-[24px] md:text-[38px] font-bold text-[#2c3e35] leading-[1.3]">Une grande pièce de vie</h2>
+        <p class="text-[#2c3e35] text-base leading-[1.7]">
           Un espace de vie partagé avec les autres colocataires (avec cuisine ouverte). Lieu où l'on se retrouve pour faire des activités au gré des envies et des propositions de chacun : dessiner, jouer, chanter, lire, écouter de la musique… On peut aussi participer aux tâches de la vie quotidienne, comme à la maison et selon ses capacités, afin de maintenir au mieux son autonomie.
         </p>
       </div>
@@ -49,28 +51,30 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <!-- Salle d'activité -->
   <section class="bg-[#faf8f5]">
-    <div class="max-w-[1440px] mx-auto px-20 py-20 flex items-center gap-20">
-      <div class="flex flex-col gap-6 flex-1">
-        <h2 class="font-serif text-[38px] font-bold text-[#2c3e35] leading-[1.3] w-[520px]">Une salle d'activité</h2>
-        <p class="text-[#5a7a68] text-base leading-[1.7] w-[520px]">
+    <div class="max-w-[1440px] mx-auto px-4 md:px-20 py-10 md:py-20 flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-20">
+      <div class="flex flex-col gap-6 w-full md:flex-1">
+        <h2 class="font-serif text-[24px] md:text-[38px] font-bold text-[#2c3e35] leading-[1.3]">Une salle d'activité</h2>
+        <p class="text-[#5a7a68] text-base leading-[1.7]">
           Permet les séances de kiné, d'orthophonie ou des retrouvailles familiales. La maison vit au rythme de ses habitants, chacun est libre de ses activités, tout étant sécurisé par la présence bienveillante des assistantes de vie.
         </p>
       </div>
-      <div class="shrink-0">
-        <img src="/assets/maison-activite.png" alt="Salle d'activité" class="rounded-3xl object-cover" style="width:646px;height:400px;" />
+      <div class="w-full md:shrink-0">
+        <img src="/assets/maison-activite.png" alt="Salle d'activité"
+          class="w-full md:w-[500px] rounded-3xl object-cover h-[220px] md:h-[400px]" />
       </div>
     </div>
   </section>
 
   <!-- Cuisine -->
   <section class="bg-[#d4e4d0]">
-    <div class="max-w-[1440px] mx-auto px-20 py-20 flex items-center gap-20">
-      <div class="shrink-0">
-        <img src="/assets/maison-cuisine.jpg" alt="La cuisine" class="rounded-3xl object-cover" style="width:500px;height:400px;" />
+    <div class="max-w-[1440px] mx-auto px-4 md:px-20 py-10 md:py-20 flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-20">
+      <div class="w-full md:shrink-0">
+        <img src="/assets/maison-cuisine.jpg" alt="La cuisine"
+          class="w-full md:w-[500px] rounded-3xl object-cover h-[220px] md:h-[400px]" />
       </div>
-      <div class="flex flex-col gap-6 flex-1">
-        <h2 class="font-serif text-[38px] font-bold text-[#2c3e35] leading-[1.3] w-[520px]">Une cuisine ouverte sur le séjour</h2>
-        <p class="text-[#2c3e35] text-base leading-[1.7] w-[520px]">
+      <div class="flex flex-col gap-6 w-full md:flex-1">
+        <h2 class="font-serif text-[24px] md:text-[38px] font-bold text-[#2c3e35] leading-[1.3]">Une cuisine ouverte sur le séjour</h2>
+        <p class="text-[#2c3e35] text-base leading-[1.7]">
           On y cuisine chaque jour des repas adaptés aux différents régimes alimentaires. Sous l'impulsion des auxiliaires de vie, les plus agiles peuvent participer à la préparation des repas et éplucher les légumes… car ici, la cuisine est familiale et on veille à respecter les goûts de chacun. Les repas sont pris en commun à midi et le soir.
         </p>
       </div>
@@ -79,24 +83,25 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <!-- Jardin -->
   <section class="bg-[#faf8f5]">
-    <div class="max-w-[1440px] mx-auto px-20 py-20 flex items-center gap-20">
-      <div class="flex flex-col gap-6 flex-1">
-        <h2 class="font-serif text-[38px] font-bold text-[#2c3e35] leading-[1.3] w-[520px]">Un jardin, partie intégrante de la maison</h2>
-        <p class="text-[#5a7a68] text-base leading-[1.7] w-[520px]">
+    <div class="max-w-[1440px] mx-auto px-4 md:px-20 py-10 md:py-20 flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-20">
+      <div class="flex flex-col gap-6 w-full md:flex-1">
+        <h2 class="font-serif text-[24px] md:text-[38px] font-bold text-[#2c3e35] leading-[1.3]">Un jardin, partie intégrante de la maison</h2>
+        <p class="text-[#5a7a68] text-base leading-[1.7]">
           Chacun peut y accéder librement, pour y jardiner, s'y promener… Il permet une stimulation et un ressourcement, grâce aux différents espaces que l'on aménagera petit à petit, selon les besoins et envies des habitants : potager, chemin de déambulation en forme de huit… Il est aussi le lieu privilégié des promenades avec les proches, et des rencontres avec les enfants.
         </p>
       </div>
-      <div class="shrink-0">
-        <img src="/assets/maison-jardin.png" alt="Le jardin" class="rounded-3xl object-cover" style="width:653px;height:400px;" />
+      <div class="w-full md:shrink-0">
+        <img src="/assets/maison-jardin.png" alt="Le jardin"
+          class="w-full md:w-[500px] rounded-3xl object-cover h-[220px] md:h-[400px]" />
       </div>
     </div>
   </section>
 
   <!-- Mais aussi… -->
   <section class="bg-[#d4e4d0]">
-    <div class="max-w-[1440px] mx-auto px-10 py-10 flex flex-col gap-12">
-      <h2 class="font-serif text-[38px] font-bold text-[#2c3e35] text-center">Mais aussi…</h2>
-      <div class="grid grid-cols-3 gap-6">
+    <div class="max-w-[1440px] mx-auto px-4 md:px-10 py-10 flex flex-col gap-8 md:gap-12">
+      <h2 class="font-serif text-[26px] md:text-[38px] font-bold text-[#2c3e35] text-center">Mais aussi…</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="bg-white rounded-[20px] p-8 flex flex-col gap-4 border border-[#d4e4d0]">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2c3e35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4 3 4 3 3 4l-.5.5C1 6 1 7 1 7c0 2 1 5 4.5 8.5C9 19 12 20 14 20h.5c.9 0 1.6-.5 2-.9l.5-.5c1-1 1-2 1-2.5 0-.3-.3-.6-.5-.8L14 13c-.3-.3-.7-.3-1 0l-1 1c-.7-.3-2-1.3-3-2.5s-2-2.3-2.5-3L7 7.5c-.3-.7.3-1.5.5-1.5s.7.3 1 .5z"/></svg>
           <h3 class="text-[#2c3e35] text-base font-semibold leading-[1.4]">Deux grandes salles de bain PMR</h3>
@@ -110,7 +115,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="bg-white rounded-[20px] p-8 flex flex-col gap-4 border border-[#d4e4d0]">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2c3e35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
           <h3 class="text-[#2c3e35] text-base font-semibold leading-[1.4]">Bureau, chambre de veille et réserve alimentaire</h3>
-          <p class="text-[#5a7a68] text-sm leading-[1.6]">Un bureau et une chambre de veille pour les assistantes de vie, une réserve alimentaire et un local technique. Cette maison est située à proximité du centre bourg et facilite l'accès aux services et à la vie sociale. La présence de la crèche, des écoles permet des interactions intergénérationnelles.</p>
+          <p class="text-[#5a7a68] text-sm leading-[1.6]">Un bureau et une chambre de veille pour les assistantes de vie, une réserve alimentaire et un local technique. Cette maison est située à proximité du centre bourg et facilite l'accès aux services et à la vie sociale.</p>
         </div>
       </div>
     </div>
@@ -118,31 +123,33 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <!-- Les familles -->
   <section class="bg-[#faf8f5]">
-    <div class="max-w-[1440px] mx-auto px-20 py-20 flex items-center gap-20">
-      <div class="flex flex-col gap-6 flex-1">
-        <h2 class="font-serif text-[38px] font-bold text-[#2c3e35] leading-[1.3] w-[520px]">Les familles</h2>
-        <p class="text-[#2c3e35] text-base leading-[1.7] w-[555px]">
+    <div class="max-w-[1440px] mx-auto px-4 md:px-20 py-10 md:py-20 flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-20">
+      <div class="flex flex-col gap-6 w-full md:flex-1">
+        <h2 class="font-serif text-[24px] md:text-[38px] font-bold text-[#2c3e35] leading-[1.3]">Les familles</h2>
+        <p class="text-[#2c3e35] text-base leading-[1.7]">
           Elles peuvent participer à la vie du domicile, aux sorties organisées, et proposer des activités ou animations (séances photos, lecture, cuisine, jeux, échanges conviviaux…).<br/><br/>
           Et si elles le souhaitent, aider au bricolage, jardinage, décoration…<br/><br/>
           Les visites des proches sont libres car c'est un domicile familial.<br/><br/>
           C'est un véritable soulagement physique et psychologique, ainsi qu'un allègement de la charge mentale pour les proches aidants.
         </p>
       </div>
-      <div class="shrink-0">
-        <img src="/assets/maison-familles.jpg" alt="Les familles au domicile partagé" class="rounded-3xl object-cover" style="width:683px;height:400px;" />
+      <div class="w-full md:shrink-0">
+        <img src="/assets/maison-familles.jpg" alt="Les familles au domicile partagé"
+          class="w-full md:w-[500px] rounded-3xl object-cover h-[220px] md:h-[400px]" />
       </div>
     </div>
   </section>
 
   <!-- La santé -->
   <section class="bg-[#d4e4d0]">
-    <div class="max-w-[1440px] mx-auto px-20 py-20 flex items-center gap-20">
-      <div class="shrink-0">
-        <img src="/assets/maison-sante.jpg" alt="Santé au domicile partagé" class="rounded-3xl object-cover" style="width:500px;height:400px;" />
+    <div class="max-w-[1440px] mx-auto px-4 md:px-20 py-10 md:py-20 flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-20">
+      <div class="w-full md:shrink-0">
+        <img src="/assets/maison-sante.jpg" alt="Santé au domicile partagé"
+          class="w-full md:w-[500px] rounded-3xl object-cover h-[220px] md:h-[400px]" />
       </div>
-      <div class="flex flex-col gap-6 flex-1">
-        <h2 class="font-serif text-[38px] font-bold text-[#2c3e35] leading-[1.3] w-[520px]">La santé</h2>
-        <p class="text-[#5a7a68] text-base leading-[1.7] w-[520px]">
+      <div class="flex flex-col gap-6 w-full md:flex-1">
+        <h2 class="font-serif text-[24px] md:text-[38px] font-bold text-[#2c3e35] leading-[1.3]">La santé</h2>
+        <p class="text-[#5a7a68] text-base leading-[1.7]">
           Le domicile partagé n'est pas médicalisé. Chaque personne conserve son médecin traitant. La continuité des soins est facilité par la proximité de la maison médicale de l'Asfeldois. Vraie référence dans la région, cette maison accueille une dizaine de professionnels de santé, dont plusieurs sont déjà très investis dans le projet. Présence de médecins généralistes, infirmiers, orthophoniste, ergothérapeute, kinés, pédicure…
         </p>
       </div>
@@ -151,9 +158,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <!-- Un accompagnement professionnel et humain -->
   <section class="bg-[#faf8f5]">
-    <div class="max-w-[1440px] mx-auto px-20 py-20 flex flex-col gap-12">
-      <h2 class="font-serif text-[38px] font-bold text-[#2c3e35] text-center w-[900px] mx-auto leading-[1.3]">Un accompagnement professionnel et humain</h2>
-      <div class="grid grid-cols-2 gap-6">
+    <div class="max-w-[1440px] mx-auto px-4 md:px-20 py-10 md:py-20 flex flex-col gap-10 md:gap-12">
+      <h2 class="font-serif text-[24px] md:text-[38px] font-bold text-[#2c3e35] text-center leading-[1.3]">Un accompagnement professionnel et humain</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="bg-white rounded-[20px] p-8 flex flex-col gap-4 border border-[#d4e4d0]">
           <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#2c3e35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M12 5 9.04 9.12 3 9.87l4.5 4.38L6.08 20 12 16.83 17.92 20l-1.42-5.75L21 9.87l-6.04-.75L12 5z"/></svg>
           <h3 class="font-serif text-[20px] font-bold text-[#2c3e35] leading-[1.3]">L'aide à domicile</h3>

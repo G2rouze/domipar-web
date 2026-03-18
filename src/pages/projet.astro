@@ -6,18 +6,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <!-- Hero -->
   <section class="bg-[#d4e4d0]">
-    <div class="max-w-[1440px] mx-auto px-20 py-20 flex flex-col items-center gap-5 text-center">
+    <div class="max-w-[1440px] mx-auto px-4 md:px-20 py-10 md:py-20 flex flex-col items-center gap-5 text-center">
       <p class="text-[#5a7a68] text-xs font-semibold tracking-[1.5px] uppercase">Notre mission</p>
-      <h1 class="font-serif text-[44px] font-bold text-[#2c3e35] w-[800px] leading-tight">S'attaquer à un enjeu de société</h1>
-      <p class="text-[#5a7a68] text-[17px] leading-[1.7] w-[700px]">
+      <h1 class="font-serif text-[28px] md:text-[44px] font-bold text-[#2c3e35] leading-tight">S'attaquer à un enjeu de société</h1>
+      <p class="text-[#5a7a68] text-base md:text-[17px] leading-[1.7] max-w-2xl">
         La France fait face à une hausse accrue des malades d'Alzheimer (1,2 million, un chiffre qui devrait doubler d'ici 2050 : 225 000 nouveaux cas diagnostiqués chaque année, soit 1 cas toutes les 2 minutes 30).
       </p>
-      <div class="flex items-center gap-4 mt-2">
-        <a href="#enjeu" class="inline-flex items-center px-8 py-[14px] rounded-full bg-[#2c3e35] text-white text-[15px] font-semibold hover:bg-[#1e2e27] transition-colors">
+      <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 mt-2">
+        <a href="#enjeu" class="inline-flex items-center justify-center px-8 py-[14px] rounded-full bg-[#2c3e35] text-white text-[15px] font-semibold hover:bg-[#1e2e27] transition-colors">
           Découvrir le projet
         </a>
         <a href="https://www.helloasso.com/associations/domipar-asfeld/formulaires/1" target="_blank" rel="noopener"
-          class="inline-flex items-center px-8 py-[14px] rounded-full border border-[#2c3e35] bg-[#d4e4d0] text-[#2c3e35] text-[15px] font-semibold hover:bg-white transition-colors">
+          class="inline-flex items-center justify-center px-8 py-[14px] rounded-full border border-[#2c3e35] bg-[#d4e4d0] text-[#2c3e35] text-[15px] font-semibold hover:bg-white transition-colors">
           Nous soutenir
         </a>
       </div>
@@ -26,10 +26,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <!-- Section — Enjeu de société -->
   <section id="enjeu" class="bg-[#faf8f5]">
-    <div class="max-w-[1440px] mx-auto px-20 py-20 flex items-start gap-[60px]">
-      <div class="flex flex-col gap-6 w-[560px] shrink-0 pt-2">
+    <div class="max-w-[1440px] mx-auto px-4 md:px-20 py-10 md:py-20 flex flex-col md:flex-row items-start gap-8 md:gap-[60px]">
+      <div class="flex flex-col gap-6 w-full md:w-[560px] md:shrink-0">
         <p class="text-[#7a9a88] text-[11px] font-semibold tracking-[1.5px] uppercase">Enjeu de société</p>
-        <h2 class="font-serif text-[36px] font-bold text-[#2c3e35] leading-[1.3]">S'attaquer à un enjeu de société</h2>
+        <h2 class="font-serif text-[24px] md:text-[36px] font-bold text-[#2c3e35] leading-[1.3]">S'attaquer à un enjeu de société</h2>
         <p class="text-[#5a7a68] text-base leading-[1.7]">
           La France fait face à une hausse accrue des malades d'Alzheimer (1,2 million, un chiffre qui devrait doubler d'ici 2050 : 225 000 nouveaux cas diagnostiqués chaque année, soit 1 cas toutes les 2 minutes 30).<br/><br/>
           (source: Fondation Médéric Alzheimer)
@@ -38,30 +38,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           La maladie est épuisante pour les aidants, rendant le maintien à domicile difficile, et les EHPAD ne proposent pas toujours une solution satisfaisante.
         </p>
       </div>
-      <div class="flex-1">
-        <img
-          src="/assets/projet-alzheimer.png"
-          alt="Illustration Alzheimer"
-          class="w-full rounded-3xl"
-        />
+      <div class="w-full md:flex-1">
+        <img src="/assets/projet-alzheimer.png" alt="Illustration Alzheimer" class="w-full rounded-3xl" />
       </div>
     </div>
   </section>
 
   <!-- Section — Domicile partagé -->
   <section class="bg-[#d4e4d0]">
-    <div class="max-w-[1440px] mx-auto px-20 py-20 flex items-center gap-[60px]">
-      <div class="shrink-0">
-        <img
-          src="/assets/projet-photo-maison.jpg"
-          alt="Photo de la maison"
-          class="rounded-3xl object-cover"
-          style="width:480px;height:400px;"
-        />
+    <div class="max-w-[1440px] mx-auto px-4 md:px-20 py-10 md:py-20 flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-[60px]">
+      <div class="w-full md:shrink-0">
+        <img src="/assets/projet-photo-maison.jpg" alt="Photo de la maison"
+          class="w-full md:w-[480px] rounded-3xl object-cover h-[220px] md:h-[400px]" />
       </div>
-      <div class="flex flex-col gap-6 w-[560px]">
+      <div class="flex flex-col gap-6 w-full md:w-[560px]">
         <p class="text-[#5a7a68] text-[11px] font-semibold tracking-[1.5px] uppercase">Une alternative</p>
-        <h2 class="font-serif text-[36px] font-bold text-[#2c3e35] leading-[1.3]">Une alternative : le domicile partagé</h2>
+        <h2 class="font-serif text-[24px] md:text-[36px] font-bold text-[#2c3e35] leading-[1.3]">Une alternative : le domicile partagé</h2>
         <p class="text-[#2c3e35] text-base leading-[1.7]">
           Un habitat adapté à la perte d'autonomie, où les colocataires bénéficient d'assistantes de vie, jour et nuit. L'objectif est d'accueillir des personnes âgées désorientées qui, en raison de leur perte d'autonomie, ne peuvent plus vivre sans l'aide d'assistant(e)s de vie 24 heures sur 24.
         </p>
@@ -76,15 +68,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <!-- Section — Bénéfices -->
   <section class="bg-[#faf8f5]">
-    <div class="max-w-[1440px] mx-auto px-20 py-20 flex flex-col gap-12">
+    <div class="max-w-[1440px] mx-auto px-4 md:px-20 py-10 md:py-20 flex flex-col gap-10 md:gap-12">
       <div class="flex flex-col items-center gap-4 text-center">
         <p class="text-[#7a9a88] text-[11px] font-semibold tracking-[1.5px] uppercase">Les bénéfices</p>
-        <h2 class="font-serif text-[40px] font-bold text-[#2c3e35]">Une solution pour tous</h2>
-        <p class="text-[#5a7a68] text-base leading-[1.6] w-[680px]">
+        <h2 class="font-serif text-[26px] md:text-[40px] font-bold text-[#2c3e35]">Une solution pour tous</h2>
+        <p class="text-[#5a7a68] text-base leading-[1.6] max-w-xl">
           Le domicile partagé est une alternative bénéfique pour les malades, leurs proches et les assistantes de vie.
         </p>
       </div>
-      <div class="grid grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="bg-white rounded-[20px] p-8 flex flex-col gap-4 border border-[#d4e4d0] shadow-sm">
           <div class="w-12 h-12 rounded-xl bg-[#d4e4d0] flex items-center justify-center">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2c3e35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
@@ -112,51 +104,47 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <!-- Section — Habitat inclusif -->
   <section class="bg-[#d4e4d0]">
-    <div class="max-w-[1440px] mx-auto px-20 py-20 flex items-center gap-[60px]">
-      <div class="flex flex-col gap-6 flex-1">
+    <div class="max-w-[1440px] mx-auto px-4 md:px-20 py-10 md:py-20 flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-[60px]">
+      <div class="flex flex-col gap-6 w-full md:flex-1">
         <p class="text-[#5a7a68] text-[11px] font-semibold tracking-[1.5px] uppercase">Habitat inclusif</p>
-        <h2 class="font-serif text-[36px] font-bold text-[#2c3e35] leading-[1.3]">L'habitat inclusif se déploie</h2>
+        <h2 class="font-serif text-[24px] md:text-[36px] font-bold text-[#2c3e35] leading-[1.3]">L'habitat inclusif se déploie</h2>
         <p class="text-[#5a7a68] text-base leading-[1.7]">
           La loi ELAN du 23 novembre 2018 donne une existence juridique à l'habitat inclusif. Un mouvement d'ampleur : 1885 projets en France en 2022, grâce à une aide à la vie partagée (AVP) financée par les conseils départementaux.
         </p>
       </div>
-      <div class="shrink-0">
-        <img
-          src="/assets/projet-habitat_partage_solution_avenir.png"
-          alt="L'habitat partagé, solution d'avenir"
-          class="rounded-[20px] object-cover"
-          style="width:756px;height:420px;"
-        />
+      <div class="w-full md:shrink-0">
+        <img src="/assets/projet-habitat_partage_solution_avenir.png" alt="L'habitat partagé, solution d'avenir"
+          class="w-full md:w-[560px] rounded-[20px] object-cover h-[200px] md:h-[420px]" />
       </div>
     </div>
   </section>
 
   <!-- Section — Étude nationale -->
   <section class="bg-[#faf8f5]">
-    <div class="max-w-[1440px] mx-auto px-20 py-20 flex flex-col gap-12">
+    <div class="max-w-[1440px] mx-auto px-4 md:px-20 py-10 md:py-20 flex flex-col gap-10 md:gap-12">
       <div class="flex flex-col items-center gap-4 text-center">
         <p class="text-[#5a7a68] text-[11px] font-semibold tracking-[1.5px] uppercase">Étude nationale</p>
-        <h2 class="font-serif text-[40px] font-bold text-[#2c3e35]">Etude nationale sur les colocations Alzheimer</h2>
-        <p class="text-[#2c3e35] text-base leading-[1.6] w-[680px]">
+        <h2 class="font-serif text-[24px] md:text-[40px] font-bold text-[#2c3e35]">Etude nationale sur les colocations Alzheimer</h2>
+        <p class="text-[#2c3e35] text-base leading-[1.6] max-w-2xl">
           Cette première étude publiée par la Fondation Médéric Alzheimer (FMA) et émiCité en novembre 2023 explore une approche innovante pour les personnes en France ayant maladie d'Alzheimer ou apparentées.
         </p>
       </div>
       <div class="flex flex-col gap-8">
-        <div class="bg-white rounded-[20px] p-8 flex flex-col gap-4 border border-[#d4e4d0]">
-          <div class="w-14 h-14 rounded-full bg-[#2c3e35] flex items-center justify-center">
+        <div class="bg-white rounded-[20px] p-6 md:p-8 flex flex-col gap-4 border border-[#d4e4d0]">
+          <div class="w-14 h-14 rounded-full bg-[#2c3e35] flex items-center justify-center shrink-0">
             <span class="font-serif text-[20px] font-bold text-white">01</span>
           </div>
           <h3 class="font-serif text-[18px] font-bold text-[#2c3e35]">Une troisième option reconnue</h3>
           <p class="text-[#5a7a68] text-sm leading-[1.6]">Elle reconnaît les habitats partagés comme une troisième option en plus des soins à domicile et des EHPAD et met en lumière l'impact positif de l'hébergement partagé, offrant une solution alternative favorisant à la fois l'autonomie et la communauté pour les personnes touchées par ces maladies.</p>
         </div>
-        <div class="bg-white rounded-[20px] p-8 flex flex-col gap-4 border border-[#d4e4d0]">
-          <div class="w-14 h-14 rounded-full bg-[#2c3e35] flex items-center justify-center">
+        <div class="bg-white rounded-[20px] p-6 md:p-8 flex flex-col gap-4 border border-[#d4e4d0]">
+          <div class="w-14 h-14 rounded-full bg-[#2c3e35] flex items-center justify-center shrink-0">
             <span class="font-serif text-[20px] font-bold text-white">02</span>
           </div>
           <h3 class="font-serif text-[18px] font-bold text-[#2c3e35]">Réduction de l'isolement</h3>
           <p class="text-[#5a7a68] text-sm leading-[1.6]">Cette étude met en évidence l'efficacité des habitats partagés, où les individus peuvent vivre ensemble dans un environnement familial, réduisant le sentiment d'isolement et favorisant les interactions sociales.</p>
         </div>
-        <div class="bg-[#2c3e35] rounded-[16px] px-10 py-7 flex items-center justify-between gap-10">
+        <div class="bg-[#2c3e35] rounded-[16px] px-6 md:px-10 py-6 md:py-7 flex flex-col md:flex-row items-start md:items-center justify-between gap-5 md:gap-10">
           <p class="text-[#7a9a88] text-sm leading-[1.6]">Fondation Médéric Alzheimer &amp; émiCité — Première étude nationale sur les colocations Alzheimer, novembre 2023</p>
           <a href="https://www.fondation-mederic-alzheimer.org/24-mars-place-des-colocations-alzheimer-dans-loffre-dhabitat-pour-personnes-agees/"
             target="_blank" rel="noopener"
@@ -170,36 +158,36 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <!-- Section — Ils parlent de nous -->
   <section class="bg-[#d4e4d0]">
-    <div class="max-w-[1440px] mx-auto px-20 py-20 flex flex-col gap-8">
+    <div class="max-w-[1440px] mx-auto px-4 md:px-20 py-10 md:py-20 flex flex-col gap-8">
       <div class="flex flex-col items-center gap-4 text-center">
         <p class="text-[#5a7a68] text-[11px] font-semibold tracking-[1.5px] uppercase">Ils parlent de nous</p>
-        <h2 class="font-serif text-[44px] font-bold text-[#2c3e35] leading-[1.2] w-[800px]">Ils parlent de nous</h2>
-        <p class="text-[#5a7a68] text-[17px] leading-[1.6]">
+        <h2 class="font-serif text-[28px] md:text-[44px] font-bold text-[#2c3e35] leading-[1.2]">Ils parlent de nous</h2>
+        <p class="text-[#5a7a68] text-base md:text-[17px] leading-[1.6]">
           Retrouvez les articles de presse qui parlent du projet Domipar et de la colocation Alzheimer à Asfeld.
         </p>
       </div>
       <div class="flex flex-col gap-3">
-        <a href="https://www.lardennais.fr/id728937/article/2025-07-01/6000-km-velo-direction-le-cap-nord-pour-parler-dalzheimer" target="_blank" rel="noopener" class="bg-white rounded-xl px-6 py-4 flex flex-col gap-1.5 border border-[#d4e4d0] hover:border-[#5a7a68] transition-colors">
+        <a href="https://www.lardennais.fr/id728937/article/2025-07-01/6000-km-velo-direction-le-cap-nord-pour-parler-dalzheimer" target="_blank" rel="noopener" class="bg-white rounded-xl px-5 md:px-6 py-4 flex flex-col gap-1.5 border border-[#d4e4d0] hover:border-[#5a7a68] transition-colors">
           <span class="text-[#5a7a68] text-[11px] font-semibold tracking-[1.5px] uppercase">L'Ardennais · 1 Juillet 2025</span>
           <span class="text-[#2c3e35] text-[15px] font-medium">« 6000 km à vélo, direction le Cap Nord pour parler d'Alzheimer »</span>
         </a>
-        <a href="https://www.lardennais.fr/id728549/article/2025-06-30/un-film-debat-pour-motiver-les-elus-multiplier-les-colocations-alzheimer" target="_blank" rel="noopener" class="bg-white rounded-xl px-6 py-4 flex flex-col gap-1.5 border border-[#d4e4d0] hover:border-[#5a7a68] transition-colors">
+        <a href="https://www.lardennais.fr/id728549/article/2025-06-30/un-film-debat-pour-motiver-les-elus-multiplier-les-colocations-alzheimer" target="_blank" rel="noopener" class="bg-white rounded-xl px-5 md:px-6 py-4 flex flex-col gap-1.5 border border-[#d4e4d0] hover:border-[#5a7a68] transition-colors">
           <span class="text-[#5a7a68] text-[11px] font-semibold tracking-[1.5px] uppercase">L'Ardennais · 30 Juin 2025</span>
           <span class="text-[#2c3e35] text-[15px] font-medium">« Un film-débat pour motiver les élus à multiplier les colocations Alzheimer »</span>
         </a>
-        <a href="https://www.lardennais.fr/id716266/article/2025-05-17/dans-cette-commune-des-ardennes-un-domicile-partage-pour-les-malades-dalzheimer" target="_blank" rel="noopener" class="bg-white rounded-xl px-6 py-4 flex flex-col gap-1.5 border border-[#d4e4d0] hover:border-[#5a7a68] transition-colors">
+        <a href="https://www.lardennais.fr/id716266/article/2025-05-17/dans-cette-commune-des-ardennes-un-domicile-partage-pour-les-malades-dalzheimer" target="_blank" rel="noopener" class="bg-white rounded-xl px-5 md:px-6 py-4 flex flex-col gap-1.5 border border-[#d4e4d0] hover:border-[#5a7a68] transition-colors">
           <span class="text-[#5a7a68] text-[11px] font-semibold tracking-[1.5px] uppercase">L'Ardennais · 18 Mai 2025</span>
           <span class="text-[#2c3e35] text-[15px] font-medium">« Bientôt un domicile partagé pour les patients atteints d'Alzheimer »</span>
         </a>
-        <a href="https://www.lunion.fr/id661821/article/2024-11-17/le-projet-de-maison-alzheimer-avance-et-lance-sa-cagnotte-reims" target="_blank" rel="noopener" class="bg-white rounded-xl px-6 py-4 flex flex-col gap-1.5 border border-[#d4e4d0] hover:border-[#5a7a68] transition-colors">
+        <a href="https://www.lunion.fr/id661821/article/2024-11-17/le-projet-de-maison-alzheimer-avance-et-lance-sa-cagnotte-reims" target="_blank" rel="noopener" class="bg-white rounded-xl px-5 md:px-6 py-4 flex flex-col gap-1.5 border border-[#d4e4d0] hover:border-[#5a7a68] transition-colors">
           <span class="text-[#5a7a68] text-[11px] font-semibold tracking-[1.5px] uppercase">L'Union · 17 Novembre 2024</span>
           <span class="text-[#2c3e35] text-[15px] font-medium">« Le projet de maison Alzheimer avance et lance sa cagnotte à Reims »</span>
         </a>
-        <a href="https://www.lardennais.fr/id614544/article/2024-06-24/une-maison-alzheimer-dun-genre-nouveau-se-prepare-asfeld-pour-2026" target="_blank" rel="noopener" class="bg-white rounded-xl px-6 py-4 flex flex-col gap-1.5 border border-[#d4e4d0] hover:border-[#5a7a68] transition-colors">
+        <a href="https://www.lardennais.fr/id614544/article/2024-06-24/une-maison-alzheimer-dun-genre-nouveau-se-prepare-asfeld-pour-2026" target="_blank" rel="noopener" class="bg-white rounded-xl px-5 md:px-6 py-4 flex flex-col gap-1.5 border border-[#d4e4d0] hover:border-[#5a7a68] transition-colors">
           <span class="text-[#5a7a68] text-[11px] font-semibold tracking-[1.5px] uppercase">L'Ardennais</span>
           <span class="text-[#2c3e35] text-[15px] font-medium">« Une maison Alzheimer d'un genre nouveau se prépare à Asfeld pour 2026 »</span>
         </a>
-        <a href="https://www.lunion.fr/id624694/article/2024-07-26/un-domicile-special-alzheimer-dans-les-cartons-dune-association-remoise" target="_blank" rel="noopener" class="bg-white rounded-xl px-6 py-4 flex flex-col gap-1.5 border border-[#d4e4d0] hover:border-[#5a7a68] transition-colors">
+        <a href="https://www.lunion.fr/id624694/article/2024-07-26/un-domicile-special-alzheimer-dans-les-cartons-dune-association-remoise" target="_blank" rel="noopener" class="bg-white rounded-xl px-5 md:px-6 py-4 flex flex-col gap-1.5 border border-[#d4e4d0] hover:border-[#5a7a68] transition-colors">
           <span class="text-[#5a7a68] text-[11px] font-semibold tracking-[1.5px] uppercase">L'Union</span>
           <span class="text-[#2c3e35] text-[15px] font-medium">« Un domicile spécial Alzheimer dans les cartons d'une association remoise »</span>
         </a>
@@ -209,28 +197,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <!-- Section — Porteurs du projet -->
   <section class="bg-white">
-    <div class="max-w-[1440px] mx-auto px-20 py-20 flex flex-col gap-12">
+    <div class="max-w-[1440px] mx-auto px-4 md:px-20 py-10 md:py-20 flex flex-col gap-10 md:gap-12">
       <div class="flex flex-col items-center gap-3 text-center">
         <p class="text-[#7a9a88] text-[11px] font-semibold tracking-[1.5px] uppercase">Le projet</p>
-        <h2 class="font-serif text-[32px] font-bold text-[#2c3e35] leading-[1.3] w-[900px]">L'association DOMIPAR porte le projet avec :</h2>
+        <h2 class="font-serif text-[24px] md:text-[32px] font-bold text-[#2c3e35] leading-[1.3]">L'association DOMIPAR porte le projet avec :</h2>
       </div>
-      <div class="flex gap-[60px]">
+      <div class="flex flex-col md:flex-row gap-8 md:gap-[60px]">
         <div class="flex-1 flex flex-col items-center gap-5">
-          <img
-            src="/assets/projet-partenaire-plurial.jpg"
-            alt="Plurial Novilia"
-            class="w-full rounded-xl object-contain bg-white p-4"
-            style="height:220px;"
-          />
+          <img src="/assets/projet-partenaire-plurial.jpg" alt="Plurial Novilia"
+            class="w-full rounded-xl object-contain bg-white p-4 h-[180px] md:h-[220px]" />
           <p class="text-[#5a7a68] text-base leading-[1.6] text-center">Le bailleur social Plurial Novilia construit le domicile.</p>
         </div>
         <div class="flex-1 flex flex-col items-center gap-5">
-          <img
-            src="/assets/projet-partenaire-image.png"
-            alt="Commune d'Asfeld"
-            class="w-full rounded-xl object-contain bg-white p-4"
-            style="height:220px;"
-          />
+          <img src="/assets/projet-partenaire-image.png" alt="Commune d'Asfeld"
+            class="w-full rounded-xl object-contain bg-white p-4 h-[180px] md:h-[220px]" />
           <p class="text-[#5a7a68] text-base leading-[1.6] text-center">La commune d'Asfeld cède un terrain.</p>
         </div>
       </div>
@@ -239,25 +219,25 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <!-- Section — Ils nous font confiance -->
   <section class="bg-white">
-    <div class="max-w-[1440px] mx-auto px-20 py-20 flex flex-col items-center gap-12">
-      <h2 class="font-serif text-[32px] font-bold text-[#2c3e35]">Ils nous font confiance</h2>
-      <div class="flex flex-wrap justify-center items-center gap-8">
-        <img src="/assets/logo-partenaires/ardennes.png" alt="Département des Ardennes" class="h-14 object-contain" />
-        <img src="/assets/logo-partenaires/admr.png" alt="ADMR" class="h-14 object-contain" />
-        <img src="/assets/logo-partenaires/msa.png" alt="MSA" class="h-14 object-contain" />
-        <img src="/assets/logo-partenaires/ag2r.png" alt="AG2R La Mondiale" class="h-14 object-contain" />
-        <img src="/assets/logo-partenaires/ks.png" alt="KS Groupe" class="h-14 object-contain" />
-        <img src="/assets/logo-partenaires/logo_lpp_bleu_baseline.png" alt="Les Petites Pierres" class="h-14 object-contain" />
-        <img src="/assets/logo-partenaires/casalis%20(1).png" alt="Casalis" class="h-14 object-contain" />
-        <img src="/assets/logo-partenaires/ars.png" alt="ARS" class="h-14 object-contain" />
-        <img src="/assets/logo-partenaires/familles_solidaires.png" alt="Familles Solidaires" class="h-14 object-contain" />
-        <img src="/assets/logo-partenaires/logo_pfp_fondation_signature_rouge_rvb.jpg" alt="Fondation Pour Partager" class="h-14 object-contain" />
-        <img src="/assets/logo-partenaires/marechalle-logo.png" alt="Établissements Maréchalle" class="h-14 object-contain" />
-        <img src="/assets/logo-partenaires/fondaton-mederic.png" alt="Fondation Médéric Alzheimer" class="h-14 object-contain" />
-        <img src="/assets/logo-partenaires/lions-alzheimer.png" alt="Lions Alzheimer" class="h-14 object-contain" />
-        <img src="/assets/logo-partenaires/fond-ca.png" alt="Fondation Crédit Agricole" class="h-14 object-contain" />
-        <img src="/assets/logo-partenaires/ideoprim.png" alt="IDEOPRIM" class="h-14 object-contain" />
-        <img src="/assets/logo-partenaires/ca-nord-est.png" alt="Crédit Agricole Nord-Est" class="h-14 object-contain" />
+    <div class="max-w-[1440px] mx-auto px-4 md:px-20 py-10 md:py-20 flex flex-col items-center gap-10 md:gap-12">
+      <h2 class="font-serif text-[24px] md:text-[32px] font-bold text-[#2c3e35]">Ils nous font confiance</h2>
+      <div class="flex flex-wrap justify-center items-center gap-6 md:gap-8">
+        <img src="/assets/logo-partenaires/ardennes.png" alt="Département des Ardennes" class="h-10 md:h-14 object-contain" />
+        <img src="/assets/logo-partenaires/admr.png" alt="ADMR" class="h-10 md:h-14 object-contain" />
+        <img src="/assets/logo-partenaires/msa.png" alt="MSA" class="h-10 md:h-14 object-contain" />
+        <img src="/assets/logo-partenaires/ag2r.png" alt="AG2R La Mondiale" class="h-10 md:h-14 object-contain" />
+        <img src="/assets/logo-partenaires/ks.png" alt="KS Groupe" class="h-10 md:h-14 object-contain" />
+        <img src="/assets/logo-partenaires/logo_lpp_bleu_baseline.png" alt="Les Petites Pierres" class="h-10 md:h-14 object-contain" />
+        <img src="/assets/logo-partenaires/casalis%20(1).png" alt="Casalis" class="h-10 md:h-14 object-contain" />
+        <img src="/assets/logo-partenaires/ars.png" alt="ARS" class="h-10 md:h-14 object-contain" />
+        <img src="/assets/logo-partenaires/familles_solidaires.png" alt="Familles Solidaires" class="h-10 md:h-14 object-contain" />
+        <img src="/assets/logo-partenaires/logo_pfp_fondation_signature_rouge_rvb.jpg" alt="Fondation Pour Partager" class="h-10 md:h-14 object-contain" />
+        <img src="/assets/logo-partenaires/marechalle-logo.png" alt="Établissements Maréchalle" class="h-10 md:h-14 object-contain" />
+        <img src="/assets/logo-partenaires/fondaton-mederic.png" alt="Fondation Médéric Alzheimer" class="h-10 md:h-14 object-contain" />
+        <img src="/assets/logo-partenaires/lions-alzheimer.png" alt="Lions Alzheimer" class="h-10 md:h-14 object-contain" />
+        <img src="/assets/logo-partenaires/fond-ca.png" alt="Fondation Crédit Agricole" class="h-10 md:h-14 object-contain" />
+        <img src="/assets/logo-partenaires/ideoprim.png" alt="IDEOPRIM" class="h-10 md:h-14 object-contain" />
+        <img src="/assets/logo-partenaires/ca-nord-est.png" alt="Crédit Agricole Nord-Est" class="h-10 md:h-14 object-contain" />
       </div>
     </div>
   </section>
