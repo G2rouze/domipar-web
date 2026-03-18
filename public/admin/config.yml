@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: site/public/assets/uploads
+media_folder: public/assets/uploads
 public_folder: /assets/uploads
 
 locale: fr
@@ -11,7 +11,7 @@ collections:
   - name: actualites
     label: Actualités
     label_singular: Actualité
-    folder: site/src/content/actualites
+    folder: src/content/actualites
     create: true
     delete: true
     slug: "{{ordre}}-{{slug}}"
