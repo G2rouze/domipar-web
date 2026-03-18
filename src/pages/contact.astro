@@ -48,7 +48,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <!-- Formulaire -->
       <div class="flex-1">
         <div class="bg-white rounded-[20px] p-6 md:p-10 flex flex-col gap-5 border border-[#d4e4d0]">
+          <div id="form-success" class="hidden flex flex-col items-center gap-3 py-10 text-center">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#5a7a68" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <p class="font-serif text-[20px] text-[#2c3e35]">Message envoyé !</p>
+            <p class="text-[#5a7a68] text-base">Merci, nous vous répondrons dans les meilleurs délais.</p>
+          </div>
+
           <form
+            id="contact-form"
             name="contact"
             method="POST"
             data-netlify="true"
@@ -89,6 +96,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               Envoyer
             </button>
           </form>
+
+          <script>
+            const form = document.getElementById('contact-form');
+            const success = document.getElementById('form-success');
+            form.addEventListener('submit', async (e) => {
+              e.preventDefault();
+              await fetch('/', { method: 'POST', body: new FormData(form) });
+              form.classList.add('hidden');
+              success.classList.remove('hidden');
+            });
+          </script>
         </div>
       </div>
 
