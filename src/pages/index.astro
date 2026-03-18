@@ -6,7 +6,6 @@ const allActus = await getCollection('actualites');
 const recentActus = allActus.sort((a, b) => a.data.ordre - b.data.ordre).slice(0, 3);
 
 const evenements = await getCollection('evenements');
-const evenement = evenements[0] ?? null;
 ---
 
 <BaseLayout title="Accueil" description="DOMIPAR présente son domicile partagé pour personnes atteintes d'Alzheimer ou maladies apparentées. Ouverture prévue à Asfeld dans les Ardennes fin 2027.">
@@ -64,38 +63,44 @@ const evenement = evenements[0] ?? null;
     </div>
   </section>
 
-  <!-- Événement en cours (géré via CMS) -->
-  {evenement && (
+  <!-- Événements en cours (gérés via CMS) -->
+  {evenements.length > 0 && (
     <section class="bg-[#faf8f5]">
-      <div class="max-w-[1440px] mx-auto px-20 py-20 flex items-center gap-20">
-        <div class="shrink-0 flex gap-4">
-          {evenement.data.image1 && (
-            <img
-              src={evenement.data.image1}
-              alt={evenement.data.image1Alt ?? ''}
-              class="rounded-3xl object-contain"
-              style="width:210px;height:420px;"
-            />
-          )}
-          {evenement.data.image2 && (
-            <img
-              src={evenement.data.image2}
-              alt={evenement.data.image2Alt ?? ''}
-              class="rounded-3xl object-contain"
-              style="width:210px;height:420px;"
-            />
-          )}
-        </div>
-        <div class="flex flex-col gap-6 flex-1">
-          <h2 class="font-serif text-[40px] leading-[1.25] text-[#2c3e35]">{evenement.data.titre}</h2>
-          <p class="text-[#3a5545] text-base leading-[1.7]" set:html={evenement.data.description.replace(/\n\n/g, '<br/><br/>').replace(/\n/g, ' ')} />
-          {evenement.data.lien && (
-            <a href={evenement.data.lien} target="_blank" rel="noopener"
-              class="inline-flex items-center self-start px-7 py-[13px] rounded-full bg-[#2c3e35] text-white text-sm font-semibold hover:bg-[#1e2e27] transition-colors">
-              {evenement.data.lienLabel ?? 'En savoir plus'}
-            </a>
-          )}
-        </div>
+      <div class="max-w-[1440px] mx-auto px-20 py-20 flex flex-col gap-16">
+        {evenements.map((ev) => (
+          <div class="flex items-start gap-20">
+            {(ev.data.image1 || ev.data.image2) && (
+              <div class="shrink-0 flex gap-4">
+                {ev.data.image1 && (
+                  <img
+                    src={ev.data.image1}
+                    alt={ev.data.image1Alt ?? ''}
+                    class="rounded-3xl object-contain"
+                    style="width:210px;height:420px;"
+                  />
+                )}
+                {ev.data.image2 && (
+                  <img
+                    src={ev.data.image2}
+                    alt={ev.data.image2Alt ?? ''}
+                    class="rounded-3xl object-contain"
+                    style="width:210px;height:420px;"
+                  />
+                )}
+              </div>
+            )}
+            <div class="flex flex-col gap-6 flex-1">
+              <h2 class="font-serif text-[40px] leading-[1.25] text-[#2c3e35]">{ev.data.titre}</h2>
+              <p class="text-[#3a5545] text-base leading-[1.7]" set:html={ev.data.description.replace(/\n\n/g, '<br/><br/>').replace(/\n/g, ' ')} />
+              {ev.data.lien && (
+                <a href={ev.data.lien} target="_blank" rel="noopener"
+                  class="inline-flex items-center self-start px-7 py-[13px] rounded-full bg-[#2c3e35] text-white text-sm font-semibold hover:bg-[#1e2e27] transition-colors">
+                  {ev.data.lienLabel ?? 'En savoir plus'}
+                </a>
+              )}
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   )}
