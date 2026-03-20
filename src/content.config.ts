@@ -5,7 +5,7 @@ const actualites = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/actualites' }),
   schema: z.object({
     titre: z.string(),
-    date: z.string(),
+    date: z.union([z.string(), z.date().transform(d => d.toISOString().split('T')[0])]),
     texte: z.string(),
     href: z.string().url().optional(),
   }),
