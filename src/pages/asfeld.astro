@@ -5,12 +5,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <BaseLayout title="Asfeld" description="Découvrez Asfeld, commune dynamique de 1200 habitants à 25 minutes de Reims, village d'accueil du domicile partagé Domipar.">
 
   <!-- Hero -->
-  <section
-    class="flex items-center justify-center flex-col gap-6 text-center"
-    style="background-image:url('/assets/asfeld-hero.webp');background-size:cover;background-position:center;padding:60px 16px;"
-  >
-    <h1 class="font-serif text-[36px] md:text-[52px] text-black">Asfeld</h1>
-    <p class="text-black text-base md:text-[20px] font-bold max-w-xl text-center">Découvrez Asfeld, village d'accueil pour nos 8 habitants</p>
+  <section class="bg-[#d4e4d0]">
+    <div class="max-w-[1440px] mx-auto px-4 md:px-20 py-10 md:py-20 flex flex-col items-center gap-5 text-center">
+      <h1 class="font-serif text-[28px] md:text-[44px] font-bold text-[#2c3e35] leading-tight">Asfeld</h1>
+      <p class="text-[#5a7a68] text-base md:text-[17px] leading-[1.6] max-w-xl">
+        Découvrez Asfeld, village d'accueil pour nos 8 habitants
+      </p>
+    </div>
+  </section>
+
+  <!-- Photo Asfeld -->
+  <section class="bg-[#faf8f5]">
+    <div class="max-w-[1440px] mx-auto px-4 md:px-20 py-10 md:py-[72px]">
+      <img src="/assets/asfeld-hero.webp" alt="Village d'Asfeld" class="w-full rounded-3xl object-cover h-[250px] md:h-[450px]" />
+    </div>
   </section>
 
   <!-- Section Commune -->
@@ -60,6 +68,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <span class="px-5 py-2.5 rounded-full bg-[#d4e4d0] text-[#2c3e35] text-sm">Chirurgien dentiste</span>
         <span class="px-5 py-2.5 rounded-full bg-[#d4e4d0] text-[#2c3e35] text-sm">Infirmiers</span>
         <span class="px-5 py-2.5 rounded-full bg-[#d4e4d0] text-[#2c3e35] text-sm">Masseurs-kinésithérapeutes</span>
+        <span class="px-5 py-2.5 rounded-full bg-[#d4e4d0] text-[#2c3e35] text-sm">Psychologues</span>
+        <span class="px-5 py-2.5 rounded-full bg-[#d4e4d0] text-[#2c3e35] text-sm">Orthoptistes</span>
+        <span class="px-5 py-2.5 rounded-full bg-[#d4e4d0] text-[#2c3e35] text-sm">Cardiologues</span>
         <span class="px-5 py-2.5 rounded-full bg-[#d4e4d0] text-[#2c3e35] text-sm">Orthophoniste</span>
         <span class="px-5 py-2.5 rounded-full bg-[#d4e4d0] text-[#2c3e35] text-sm">Ergothérapeute</span>
         <span class="px-5 py-2.5 rounded-full bg-[#d4e4d0] text-[#2c3e35] text-sm">Pédicure-podologue</span>

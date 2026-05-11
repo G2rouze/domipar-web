@@ -7,7 +7,7 @@ const actualites = defineCollection({
     titre: z.string(),
     date: z.string(),
     texte: z.string(),
-    href: z.string().url().optional(),
+    href: z.string().optional(),
   }),
 });
 

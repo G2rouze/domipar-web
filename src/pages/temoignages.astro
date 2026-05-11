@@ -14,12 +14,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- Vidéo -->
+  <!-- Vidéos -->
   <section class="bg-[#faf8f5]">
-    <div class="max-w-[1440px] mx-auto px-4 md:px-20 pt-10 md:pt-[72px]">
+    <div class="max-w-[1440px] mx-auto px-4 md:px-20 pt-10 md:pt-[72px] flex flex-col gap-10 md:gap-12">
       <div class="aspect-video w-full max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-md">
         <iframe
           src="https://www.youtube.com/embed/WMmk73NrCQo"
+          title="Témoignage vidéo — Domicile partagé Alzheimer"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          class="w-full h-full"
+        ></iframe>
+      </div>
+      <div class="aspect-video w-full max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-md">
+        <iframe
+          src="https://www.youtube.com/embed/WI1J4GwewEc"
           title="Témoignage vidéo — Domicile partagé Alzheimer"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
@@ -63,7 +72,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               Notre père, a intégré le domicile partagé à la suite à 8 années d'accompagnement à domicile avec une charge mentale croissante devenue très lourde, des difficultés de recrutement d'auxiliaires de vie et des tarifs horaires très élevés dans cette région côtière. Lorsque le maintien à domicile n'a plus été possible pour des raisons de sécurité, nous avons recherché un établissement pouvant accueillir notre père dans de bonnes conditions. Un dossier EPHAD était en attente depuis plusieurs mois et sans trop y croire nous y avons rajouté des dossiers dans les DP de proximité : Une chance incroyable d'offrir à notre père une autre maison pleine de vie, chaleureuse et sécurisante. Nous avons alors découvert que ces domiciles, qui offraient un accompagnement personnalisé dans une ambiance apaisante, étaient moins onéreux que les EPHAD (reste à charge moins important).
             </p>
             <p class="font-serif text-base font-semibold text-[#2c3e35]">Jean et Christian</p>
-            <p class="text-[#5a7a68] text-[13px]">Fils de leur père, résident en Domicile Partagé</p>
+            <p class="text-[#5a7a68] text-[13px]">Fils de Marcel, colocataire en Domicile Partagé</p>
           </div>
         </div>
       </div>
@@ -76,8 +85,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <p class="text-[#2c3e35] text-base leading-[1.7]">
             Notre maman est choyée à Kerifeu. Un établissement comme celui-ci est plus que remarquable. Personnel adorable, disponible, attentionné, Kerifeu est une vraie maison chaleureuse, animée, décorée joliment selon les différents moments de l'année. Beaucoup d'animations : de la musique, du sport, des visites, des balades, de la danse et beaucoup de joie, de rires.. et de bons repas fait maison. Bravo et merci !
           </p>
-          <p class="font-serif text-base font-semibold text-[#2c3e35]">Famille Kerifeu</p>
-          <p class="text-[#5a7a68] text-[13px]">Famille d'une résidente au Domicile Partagé de Kerifeu</p>
+          <p class="font-serif text-base font-semibold text-[#2c3e35]">La famille d'une habitante du DP de Kerifeu</p>
         </div>
       </div>
 

@@ -1,6 +1,5 @@
 ---
-titre: "Projection à Asfeld du film « La maison de l'instant présent »"
+titre: "Projection à Asfeld — Table ronde avec acteurs du projet"
 date: "2025-06-24"
-texte: "Projection du film à Asfeld."
-href: "https://youtu.be/qPeGfU2EGsw"
+texte: "Projection suivie d'une table ronde avec les acteurs du projet : le bailleur social Plurial Novilia, la Mairie d'Asfeld et les professionnels de santé investis dans le projet."
 ---

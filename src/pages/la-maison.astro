@@ -114,8 +114,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
         <div class="bg-white rounded-[20px] p-8 flex flex-col gap-4 border border-[#d4e4d0]">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2c3e35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
-          <h3 class="text-[#2c3e35] text-base font-semibold leading-[1.4]">Bureau, chambre de veille et réserve alimentaire</h3>
-          <p class="text-[#5a7a68] text-sm leading-[1.6]">Un bureau et une chambre de veille pour les assistantes de vie, une réserve alimentaire et un local technique. Cette maison est située à proximité du centre bourg et facilite l'accès aux services et à la vie sociale.</p>
+          <h3 class="text-[#2c3e35] text-base font-semibold leading-[1.4]">Bureau, chambre de repos et réserve alimentaire</h3>
+          <p class="text-[#5a7a68] text-sm leading-[1.6]">Un bureau et une chambre de repos pour les assistantes de vie, une réserve alimentaire et un local technique. Cette maison est située à proximité du centre bourg et facilite l'accès aux services et à la vie sociale.</p>
         </div>
       </div>
     </div>
@@ -150,7 +150,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="flex flex-col gap-6 w-full md:flex-1">
         <h2 class="font-serif text-[24px] md:text-[38px] font-bold text-[#2c3e35] leading-[1.3]">La santé</h2>
         <p class="text-[#5a7a68] text-base leading-[1.7]">
-          Le domicile partagé n'est pas médicalisé. Chaque personne conserve son médecin traitant. La continuité des soins est facilité par la proximité de la maison médicale de l'Asfeldois. Vraie référence dans la région, cette maison accueille une dizaine de professionnels de santé, dont plusieurs sont déjà très investis dans le projet. Présence de médecins généralistes, infirmiers, orthophoniste, ergothérapeute, kinés, pédicure…
+          Le domicile partagé n'est pas médicalisé. Chaque personne conserve son médecin traitant. La continuité des soins est facilité par la proximité de la maison médicale de l'Asfeldois. Vraie référence dans la région, cette maison accueille une dizaine de professionnels de santé, dont plusieurs sont déjà très investis dans le projet. Présence de médecins généralistes, infirmiers, psychologue, orthoptiste, chirurgien dentiste, cardiologue, orthophoniste, ergothérapeute, kinés, pédicure…
         </p>
       </div>
     </div>
@@ -164,16 +164,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="bg-white rounded-[20px] p-8 flex flex-col gap-4 border border-[#d4e4d0]">
           <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#2c3e35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M12 5 9.04 9.12 3 9.87l4.5 4.38L6.08 20 12 16.83 17.92 20l-1.42-5.75L21 9.87l-6.04-.75L12 5z"/></svg>
           <h3 class="font-serif text-[20px] font-bold text-[#2c3e35] leading-[1.3]">L'aide à domicile</h3>
-          <p class="text-[#5a7a68] text-sm leading-[1.6]">Prenant le relais des aidants familiaux, les assistant(e)s de vie accompagnent la personne dans sa vie quotidienne, et ce, dans un climat familial. 7 assistantes de vie, toutes formé(e)s à la pathologie Alzheimer, se relayent H24 (2 personnes le jour et 1 personne la nuit). La coordinatrice de la vie sociale et partagée joue le rôle «de maitresse de maison».</p>
+          <p class="text-[#5a7a68] text-sm leading-[1.6]">Prenant le relais des aidants familiaux, les assistant(e)s de vie accompagnent la personne dans sa vie quotidienne, et ce, dans un climat familial. <br/>
+          7 équivalent temps plein d'assistantes de vie, toutes formé(e)s à la pathologie Alzheimer, se relayent H24 (2 personnes le jour et 1 personne la nuit). <br/>
+          La coordinatrice animatrice de la vie sociale et partagée joue le rôle «de maitresse de maison».</p>
         </div>
         <div class="bg-white rounded-[20px] p-8 flex flex-col gap-4 border border-[#d4e4d0]">
           <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#2c3e35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
           <h3 class="font-serif text-[20px] font-bold text-[#2c3e35] leading-[1.3]">Le coût financier</h3>
           <p class="text-[#5a7a68] text-sm leading-[1.6]">
-            Le modèle associatif (loi 1901) limite le reste à charge.<br/>
-            Le loyer est modéré (~300 €/mois), éligible aux APL.<br/>
-            Les frais de vie et d'aide à domicile sont mutualisés.<br/>
-            Aides possibles : APA, crédit d'impôt emploi à domicile (jusqu'à 10 000 €/an), Aide à la Vie Partagée.
+            Le loyer, grâce au bailleur social, est modéré.<br/>
+            Les frais de vie quotienne et d'aide à la personne sont mutualisés entre les 8 locataires.<br/>
+            Il existe de nombreuses aides possibles : <br/>
+            - APA, <br/>
+            - crédit d'impôt emploi à domicile (jusqu'à 10 000 €/an), <br/>
+            - APL<br/>
+            L'Aide à la Vie Partagée est financée par le département et permettra l'embauche de la coordinatrice animatrice à la vie partagée.
           </p>
         </div>
       </div>
