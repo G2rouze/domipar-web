@@ -11,6 +11,38 @@ const evenements = await getCollection('evenements');
 
 <BaseLayout title="Accueil" description="DOMIPAR présente son domicile partagé pour personnes atteintes d'Alzheimer ou maladies apparentées. Ouverture prévue à Asfeld dans les Ardennes fin 2027.">
 
+  <!-- Bandeau — Soirée des Talents (à retirer après le 24 octobre 2026) -->
+  <section class="bg-[#2c3e35]">
+    <div class="max-w-[1440px] mx-auto px-4 md:px-20 py-10 md:py-14 flex flex-col md:flex-row items-center gap-8 md:gap-[60px]">
+      <div class="flex flex-col gap-5 flex-1">
+        <span class="inline-flex items-center self-start px-[14px] py-[5px] rounded-full bg-[#d4e4d0] text-[#2c3e35] text-xs font-semibold tracking-[0.5px]">
+          Samedi 24 octobre · à partir de 18h30
+        </span>
+        <h2 class="font-serif text-[26px] md:text-[40px] leading-[1.2] text-[#faf8f5]">
+          Soirée des Talents au profit de DOMIPAR
+        </h2>
+        <p class="text-[#d4e4d0] text-base md:text-[17px] leading-[1.7]">
+          Une soirée des Talents est organisée au profit de l'association, le samedi 24 octobre à partir de 18h30 dans la salle des fêtes, 3 place Grand'cour à Asfeld.
+        </p>
+        <p class="text-[#d4e4d0] text-base md:text-[17px] leading-[1.7]">
+          Nous vous attendons nombreux, petits et grands, pour soutenir le projet de Domipar : permettre à 8 personnes atteintes de la maladie d'Alzheimer de vivre « comme à la maison » dans le futur domicile partagé, en construction rue Marin Marais.
+        </p>
+        <p class="font-serif italic text-[#faf8f5] text-base md:text-[18px] leading-[1.6]">
+          Magicien, twirling bâton, groupe de musique, mimes, tours de calèche, tours en Jeep, tombola, restauration, boissons et bonbons…
+        </p>
+        <p class="text-[#faf8f5] text-base md:text-[17px] font-semibold">
+          3 € l'entrée <span class="font-normal text-[#d4e4d0]">(gratuite pour les moins de 10 ans)</span>
+        </p>
+      </div>
+      <!-- Le widget Hello Asso est sur un autre domaine : on ne peut pas le styler, donc on masque son en-tête en le décalant vers le haut dans un conteneur rogné -->
+      <div class="w-full max-w-[360px] md:shrink-0 overflow-hidden rounded-2xl bg-white">
+        <iframe id="haWidgetVignette" title="Billetterie Hello Asso — La Soirée des Talents" allowtransparency="true"
+          src="https://www.helloasso.com/associations/domipar-asfeld/evenements/la-soiree-des-talents/widget-vignette"
+          style="width: 100%; height: 680px; border: none; margin-top: -172px; display: block;"></iframe>
+      </div>
+    </div>
+  </section>
+
   <!-- Héro -->
   <section class="bg-[#faf8f5]">
     <div class="max-w-[1440px] mx-auto px-4 md:px-20 py-10 md:py-20 flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-[60px]">
